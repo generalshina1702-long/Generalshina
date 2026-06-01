@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Космоса</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1><i class="fas fa-images"></i> Фотогалерея</h1>
+            <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Космос</span></p>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-grid">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="gallery.html" class="nav-link active"><i class="fas fa-camera"></i> Галерея</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-user"></i> Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i>
+                    Изображений: <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    Всего лайков: <span id="total-likes">0</span>
+                </span>
+            </div>
+            
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active">
+                    <i class="fas fa-th"></i> Сетка
+                </button>
+                <button id="list-view" class="view-btn">
+                    <i class="fas fa-list"></i> Список
+                </button>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <h3><i class="fas fa-filter"></i> Фильтры:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="nature">Космос</button>
+                <button class="filter-btn" data-filter="city">Планеты</button>
+            </div>
+        </div>
+        
+        <!-- ГАЛЕРЕЯ С ИСПОЛЬЗОВАНИЕМ CSS GRID -->
+        <div class="gallery-grid" id="image-gallery">
+            <!-- Карточка 1 -->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/Space.webp" 
+                        width="300"
+                        alt="Описание первого изображения"
+                        class="gallery-img"
+                        loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="1">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Спиральная Галактика</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 марта 2025</p>
+                    <p class="image-description">На изображении показана величественная спиральная галактика, сияющая миллиардами звезд на фоне бескрайнего космоса.</p>
+                    <div class="image-tags">
+                        <span class="tag">космос</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка 2 -->
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="images/Kosmonavt.png"
+                        width="300" 
+                        alt="Описание второго изображения"
+                        class="gallery-img"
+                        loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Космонавт</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 20 марта 2024</p>
+                    <p class="image-description">На этом снимке показан момент, когда космонавт наслаждается видом Земли из иллюминатора.</p>
+                    <div class="image-tags">
+                        <span class="tag">Космос</span>
+                        <span class="tag">Звезды</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка 3 -->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/Mlechnyiy-put1.jpg" 
+                        width="300"
+                        alt="Звёздное небо и галактика"
+                        class="gallery-img"
+                        loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="3">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Млечный Путь</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 12 апреля 2025</p>
+                    <p class="image-description">На изображении запечатлена плотная звездная полоса Млечного Пути, простирающаяся через всё ночное небо.</p>
+                    <div class="image-tags">
+                        <span class="tag">звёзды</span>
+                        <span class="tag">галактика</span>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Карточка 4 -->
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="images/generated-image.png" 
+                        width="300"
+                        alt="Лунный пейзаж с астронавтом"
+                        class="gallery-img"
+                        loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="4">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Лунный пейзаж</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 6 сентября 2024</p>
+                    <p class="image-description">Красота пустого лунного горизонта скрывает факт: гравитация Луны вчетверо меньше земной.</p>
+                    <div class="image-tags">
+                        <span class="tag">Космос</span>
+                        <span class="tag">Звезды</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Карточка 5 -->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/ChernayaDira.png"
+                        width="300" 
+                        alt="Чёрная дыра"
+                        class="gallery-img"
+                        loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="5">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Чёрная дыра</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 1 ноября 2025</p>
+                    <p class="image-description">На этом изображении показана массивная чёрная дыра, поглощающая окружающий газ и пыль.</p>
+                    <div class="image-tags">
+                        <span class="tag">Космос</span>
+                        <span class="tag">Галактика</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Карточка 6 -->
+            <article class="image-card" data-category="nature"> 
+                <div class="card-image">
+                    <img src="images/Luna.png"
+                        width="300"
+                        alt="Луна"
+                        class="gallery-img"
+                        loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="6">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Луна</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 18 декабря 2026</p>
+                    <p class="image-description">Полная Луна на фоне тёмного космоса, где отчётливо видны её многочисленные кратеры и горные хребты.</p>
+                    <div class="image-tags">
+                        <span class="tag">Космос</span>
+                        <span class="tag">Звезды</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year">2026</span> Генеральшина Евгения 1ВР-1-2025. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+</body>
+</html>
