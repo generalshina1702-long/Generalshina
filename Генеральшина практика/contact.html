@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Космос</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1><i class="fas fa-envelope"></i> Свяжитесь со мной</h1>
+            <p class="subtitle">Вопросы, предложения или сотрудничество: <span class="theme-name">Давайте общаться!</span></p>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-grid">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="gallery.html" class="nav-link"><i class="fas fa-camera"></i> Галерея</a></li>
+                <li><a href="contact.html" class="nav-link active"><i class="fas fa-user"></i> Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="contact-content">
+            <section class="contact-intro">
+                <h2><i class="fas fa-star"></i> Контактная информация</h2>
+                <p>Я открыта для новых идей и предложений. Если у вас есть вопросы о космосе, хотите обсудить сотрудничество или просто поговорить об астрономии — не стесняйтесь связаться со мной!</p>
+            </section>
+
+            <div class="contacts-grid">
+                <!-- Контакт 1 -->
+                <article class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="contact-label">Основной адрес:</p>
+                    <a href="mailto:evgeniya.generalshina@mail.com" class="contact-link">evgeniya.generalshina@mail.com</a>
+                    <p class="contact-note">Отвечаю в течение 24 часов</p>
+                </article>
+
+                <!-- Контакт 2 -->
+                <article class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Телефон</h3>
+                    <p class="contact-label">Мобильный:</p>
+                    <a href="tel:+79999999999" class="contact-link">+7 (999) 999-99-99</a>
+                    <p class="contact-note">Доступна в рабочее время (МСК)</p>
+                </article>
+
+                <!-- Контакт 3 -->
+                <article class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Местоположение</h3>
+                    <p class="contact-label">Город:</p>
+                    <p class="contact-info">Москва, Россия</p>
+                    <p class="contact-note">Студентка IT.Москва</p>
+                </article>
+
+                <!-- Контакт 4 -->
+                <article class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Время ответа</h3>
+                    <p class="contact-label">Рабочие часы:</p>
+                    <p class="contact-info">Пн-Сб: 10:00 - 20:00</p>
+                    <p class="contact-note">По московскому времени (МСК)</p>
+                </article>
+
+                <!-- Контакт 5 -->
+                <article class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Социальные сети</h3>
+                    <p class="contact-label">Присоединяйтесь:</p>
+                    <div class="social-links">
+                        <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" title="VKontakte"><i class="fab fa-vk"></i></a>
+                    </div>
+                </article>
+
+                <!-- Контакт 6 -->
+                <article class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Портфолио</h3>
+                    <p class="contact-label">Мои работы:</p>
+                    <a href="#" class="contact-link contact-btn">Скачать резюме</a>
+                    <p class="contact-note">PDF, 500 KB</p>
+                </article>
+            </div>
+
+            <section class="contact-form-section">
+                <h2><i class="fas fa-edit"></i> Форма обратной связи</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Ваше имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" name="email" placeholder="ваш@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject"><i class="fas fa-heading"></i> Тема:</label>
+                        <input type="text" id="subject" name="subject" placeholder="О чем сообщение?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Сообщение:</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Напишите ваше сообщение..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Отправить сообщение
+                    </button>
+                </form>
+            </section>
+
+            <section class="faq-section">
+                <h2><i class="fas fa-question-circle"></i> Часто задаваемые вопросы</h2>
+                <div class="faq-grid">
+                    <article class="faq-card">
+                        <h3>Как быстрее всего связаться?</h3>
+                        <p>Отправьте email через форму обратной связи — это самый надежный способ. Я проверяю почту несколько раз в день и стараюсь отвечать максимально быстро.</p>
+                    </article>
+
+                    <article class="faq-card">
+                        <h3>Можно ли применить ваш опыт?</h3>
+                        <p>Да! Если вам нужна помощь с веб-проектами, фотографией или контентом о космосе — обязательно свяжитесь со мной. Я открыта для сотрудничества.</p>
+                    </article>
+
+                    <article class="faq-card">
+                        <h3>Как долго ждать ответа?</h3>
+                        <p>Обычно я отвечаю в течение 24 часов. В выходные дни ответ может занять немного дольше, но я обязательно вам напишу.</p>
+                    </article>
+
+                    <article class="faq-card">
+                        <h3>Есть ли конфиденциальность?</h3>
+                        <p>Да, все ваши данные защищены и используются только для ответа на ваше сообщение. Я не передаю информацию третьим лицам.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year">2026</span> Генеральшина Евгения 1ВР-1-2025. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за сообщение! Я вскоре с вами свяжусь.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
